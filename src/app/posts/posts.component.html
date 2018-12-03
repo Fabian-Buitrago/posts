@@ -1,0 +1,11 @@
+<div class="grid-container" *ngIf="posts.length">
+  <div class="list">
+    <ng-container *ngFor="let post of posts">
+      <app-list [post]="post" (postDetail)="onShowPost($event)"></app-list>
+    </ng-container>
+  </div>
+  <div class="detail">
+    <app-detail [post]="postDetail"></app-detail>
+  </div>  
+</div>
+
